@@ -1,0 +1,62 @@
+---
+const features = [
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>`,
+    title: 'Mouse Move & Resize',
+    description: 'Hold a modifier key and left-click to drag any window. Right-click to resize. No need to hunt for tiny edges.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="8" height="8" rx="1"/><rect x="2" y="13" width="8" height="8" rx="1"/><rect x="14" y="13" width="8" height="8" rx="1"/></svg>`,
+    title: 'Edge Snapping & Tiling',
+    description: 'Drag a window to any screen edge and it automatically snaps into a tiled position. Half, quarter, or full screen.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 12h2M10 12h2M14 12h2M8 8h2M12 8h2M16 8h2M7 16h10"/></svg>`,
+    title: 'Keyboard Shortcuts',
+    description: 'Quickly position windows with customizable keyboard shortcuts. Tile left, right, maximize, or center in a keystroke.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="5" width="14" height="10" rx="1.5"/><rect x="9" y="9" width="14" height="10" rx="1.5"/></svg>`,
+    title: 'Multi-Monitor Support',
+    description: 'Works seamlessly across multiple displays. Move and snap windows between monitors with the same gestures.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+    title: 'Lightweight & Fast',
+    description: 'Minimal memory footprint and zero performance impact. Runs quietly in your menu bar without slowing your Mac.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><circle cx="12" cy="18" r="1"/><path d="M9 2v1h6V2"/></svg>`,
+    title: 'Menu Bar App',
+    description: 'Lives in your menu bar, always accessible. Quick access to settings, layout presets, and more.',
+  },
+];
+---
+
+<section id="features" class="relative py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <p class="text-accent text-sm font-medium tracking-wide uppercase mb-3">Features</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        Everything you need to manage windows
+      </h2>
+      <p class="text-text-secondary text-lg max-w-xl mx-auto">
+        Powerful features packed into a lightweight, native macOS app.
+      </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature) => (
+        <div class="group relative p-6 rounded-2xl border border-border bg-bg-secondary/50 hover:bg-bg-secondary hover:border-border transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <Fragment set:html={feature.icon} />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">{feature.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

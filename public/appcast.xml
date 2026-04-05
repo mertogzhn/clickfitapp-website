@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>ClickFit Changelog</title>
+    <link>https://clickfitapp.com/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <!--
+      Add new <item> entries here for each release.
+      Example:
+      <item>
+        <title>Version 1.0.0</title>
+        <sparkle:version>1.0.0</sparkle:version>
+        <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+        <pubDate>Mon, 01 Jan 2026 00:00:00 +0000</pubDate>
+        <enclosure
+          url="https://clickfitapp.com/releases/ClickFit-1.0.0.zip"
+          sparkle:edSignature="SIGNATURE_HERE"
+          length="0"
+          type="application/octet-stream"
+        />
+      </item>
+    -->
+  </channel>
+</rss>

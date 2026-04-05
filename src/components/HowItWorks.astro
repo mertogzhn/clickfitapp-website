@@ -1,0 +1,65 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Install & Launch',
+    description: 'Download ClickFit and drop it into your Applications folder. It starts in your menu bar — no setup needed.',
+    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>`,
+  },
+  {
+    number: '02',
+    title: 'Hold Modifier & Click',
+    description: 'Hold your modifier key (e.g. Ctrl), then left-click and drag to move any window, or right-click and drag to resize.',
+    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l3.057 11.053L12 10.5l4.243 1.106L17.5 3M12 10.5V21"/><circle cx="12" cy="21" r="1"/></svg>`,
+  },
+  {
+    number: '03',
+    title: 'Snap & Organize',
+    description: 'Drag windows to screen edges to snap them into tiled layouts. Use keyboard shortcuts for even faster organization.',
+    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M12 3v18M2 12h20"/></svg>`,
+  },
+];
+---
+
+<section id="how-it-works" class="relative py-24 md:py-32">
+  <!-- Background accent -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <p class="text-accent text-sm font-medium tracking-wide uppercase mb-3">How It Works</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        Up and running in seconds
+      </h2>
+      <p class="text-text-secondary text-lg max-w-xl mx-auto">
+        No complicated setup. Install it, and you&apos;re ready to go.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+      {steps.map((step, index) => (
+        <div class="relative text-center">
+          {/* Connector line */}
+          {index < steps.length - 1 && (
+            <div class="hidden md:block absolute top-10 left-[calc(50%+40px)] w-[calc(100%-80px)] h-px bg-gradient-to-r from-border to-transparent"></div>
+          )}
+
+          {/* Step icon */}
+          <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-bg-secondary border border-border text-accent mb-6">
+            <Fragment set:html={step.icon} />
+            <span class="absolute -top-2 -right-2 w-7 h-7 rounded-lg bg-accent text-white text-xs font-bold flex items-center justify-center">
+              {step.number}
+            </span>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed max-w-xs mx-auto">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
