@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none">
-  <rect x="2" y="2" width="24" height="24" rx="6" stroke="#8B90A5" stroke-width="2"/>
-  <rect x="6" y="6" width="7" height="7" rx="1.5" fill="#A6B3CC"/>
-  <rect x="15" y="6" width="7" height="7" rx="1.5" fill="#A6B3CC" opacity="0.6"/>
-  <rect x="6" y="15" width="7" height="7" rx="1.5" fill="#A6B3CC" opacity="0.6"/>
-  <rect x="15" y="15" width="7" height="7" rx="1.5" fill="#A6B3CC" opacity="0.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none">
+  <style>
+    .icon-fill { fill: #1D1D1F; }
+    @media (prefers-color-scheme: dark) {
+      .icon-fill { fill: #E8EAF0; }
+    }
+  </style>
+  <!-- Tiled window layout -->
+  <rect class="icon-fill" x="1" y="1" width="9" height="12" rx="1.5"/>
+  <rect class="icon-fill" x="11.5" y="1" width="5" height="12" rx="1.5"/>
+  <!-- Cursor arrow -->
+  <path class="icon-fill" d="M13 11l3.5 8.5 1.5-1.5-1.8-3.2H20L13 11z"/>
 </svg>
