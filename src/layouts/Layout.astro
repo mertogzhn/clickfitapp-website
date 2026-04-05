@@ -10,7 +10,7 @@ const { title, description = 'ClickFit — Effortless window management for macO
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -31,8 +31,60 @@ const { title, description = 'ClickFit — Effortless window management for macO
     <meta name="twitter:description" content={description} />
 
     <title>{title}</title>
+
+    <!-- FOUC prevention: apply theme before first paint -->
+    <script is:inline>
+      (function() {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light' || (!stored && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.classList.remove('dark');
+        }
+        document.documentElement.setAttribute('data-no-transition', '');
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            document.documentElement.removeAttribute('data-no-transition');
+          });
+        });
+      })();
+    </script>
   </head>
   <body class="min-h-screen overflow-x-hidden">
     <slot />
+
+    <script is:inline>
+      function setTheme(mode) {
+        if (mode === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', mode);
+        // Update toggle icons
+        document.querySelectorAll('[data-theme-toggle-sun]').forEach(function(el) {
+          el.style.display = mode === 'dark' ? 'block' : 'none';
+        });
+        document.querySelectorAll('[data-theme-toggle-moon]').forEach(function(el) {
+          el.style.display = mode === 'dark' ? 'none' : 'block';
+        });
+      }
+
+      function toggleTheme() {
+        var isDark = document.documentElement.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+      }
+
+      // Listen for OS preference changes when no explicit preference stored
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+
+      // Initialize toggle icons on load
+      document.addEventListener('DOMContentLoaded', function() {
+        var isDark = document.documentElement.classList.contains('dark');
+        setTheme(isDark ? 'dark' : 'light');
+      });
+    </script>
   </body>
 </html>

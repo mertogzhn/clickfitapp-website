@@ -1,15 +1,47 @@
 @import "tailwindcss";
 
+/* Dark/light mode via class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light mode (default) */
+:root {
+  --bg: #F5F5F7;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #E8E8ED;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --border: rgba(0, 0, 0, 0.10);
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --accent: #007AFF;
+  --accent-hover: #0066D6;
+  --accent-glow: rgba(0, 122, 255, 0.20);
+}
+
+/* Dark mode */
+.dark {
+  --bg: #0B0E14;
+  --bg-secondary: #131720;
+  --bg-tertiary: #1B2030;
+  --surface-glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --text-primary: #E8EAF0;
+  --text-secondary: #8B90A5;
+  --accent: #A6B3CC;
+  --accent-hover: #B8C4D8;
+  --accent-glow: rgba(166, 179, 204, 0.25);
+}
+
 @theme {
-  --color-bg: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-bg-tertiary: #1a1a2e;
-  --color-border: #2a2a3e;
-  --color-text-primary: #e4e4ed;
-  --color-text-secondary: #9494a8;
-  --color-accent: #6c5ce7;
-  --color-accent-hover: #7c6ef7;
-  --color-accent-glow: rgba(108, 92, 231, 0.3);
+  --color-bg: var(--bg);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-surface-glass: var(--surface-glass);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-glow: var(--accent-glow);
 }
 
 html {
@@ -17,14 +49,37 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text-primary);
+  background-color: var(--bg);
+  color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: var(--color-accent);
+  background-color: var(--accent);
   color: white;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Disable transitions on initial load to prevent FOUC */
+[data-no-transition] *,
+[data-no-transition] *::before,
+[data-no-transition] *::after {
+  transition: none !important;
+}
+
+/* Glass card component — matches app's SectionCard (14pt radius, frosted glass) */
+@layer components {
+  .glass-card {
+    background: var(--surface-glass);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 }
