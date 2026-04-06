@@ -15,9 +15,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/macOS-14%20Sonoma%2B-black?logo=apple" alt="macOS 14+" />
+  <img src="https://img.shields.io/badge/macOS-15%20Sequoia%2B-black?logo=apple" alt="macOS 15+" />
   <img src="https://img.shields.io/badge/Apple%20Silicon%20%26%20Intel-supported-green" alt="Universal" />
-  <img src="https://img.shields.io/badge/Price-Free-brightgreen" alt="Free" />
+  <img src="https://img.shields.io/badge/Free%20Trial-then%20Subscribe-8b9fcc" alt="Subscription" />
   <img src="https://img.shields.io/badge/Built%20with-Swift-F05138?logo=swift&logoColor=white" alt="Swift" />
 </p>
 
@@ -61,7 +61,7 @@ Native Swift with vsync-aligned updates. Under 20MB, minimal memory footprint.
 
 ## System Requirements
 
-- macOS 14 Sonoma or later
+- macOS 15 Sequoia or later
 - Apple Silicon & Intel supported
 - Accessibility permission required (System Settings > Privacy & Security > Accessibility)
 
