@@ -15,14 +15,43 @@
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        <span class="hero-win-title flex-1 text-center text-[10px] font-medium">Browser</span>
       </div>
-      <div class="hero-win-body p-3 space-y-2">
-        <div class="h-1.5 rounded-full hero-content-line w-4/5"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-3/5"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-full"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-2/3"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-4/5"></div>
+      <div class="hero-win-body browser-body">
+        <!-- URL bar -->
+        <div class="browser-url-bar">
+          <div class="browser-nav-btns">
+            <span class="browser-nav-btn"></span>
+            <span class="browser-nav-btn"></span>
+          </div>
+          <div class="browser-url-field">
+            <span class="browser-lock">&#x1F512;</span>
+            <span class="browser-url-text"></span>
+          </div>
+        </div>
+        <!-- Page content -->
+        <div class="browser-page">
+          <!-- Hero image placeholder -->
+          <div class="browser-hero-img"></div>
+          <!-- Heading -->
+          <div class="browser-heading"></div>
+          <!-- Text lines -->
+          <div class="browser-text w-full"></div>
+          <div class="browser-text w-[85%]"></div>
+          <div class="browser-text w-[70%]"></div>
+          <!-- Two column cards -->
+          <div class="browser-cards">
+            <div class="browser-card">
+              <div class="browser-card-img"></div>
+              <div class="browser-text w-[90%]"></div>
+              <div class="browser-text w-[60%]"></div>
+            </div>
+            <div class="browser-card">
+              <div class="browser-card-img"></div>
+              <div class="browser-text w-[80%]"></div>
+              <div class="browser-text w-[50%]"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -32,17 +61,39 @@
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        <span class="hero-win-title flex-1 text-center text-[10px] font-medium">Code Editor</span>
       </div>
-      <div class="hero-win-body p-3 space-y-2">
-        <div class="h-1.5 rounded-full hero-content-line w-3/4"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-1/2"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-5/6"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-2/3"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-4/5"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-3/5"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-full"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-2/5"></div>
+      <div class="hero-win-body editor-body">
+        <!-- Sidebar: file explorer -->
+        <div class="editor-sidebar">
+          <div class="editor-section-head"></div>
+          <div class="editor-file active"></div>
+          <div class="editor-file"></div>
+          <div class="editor-file indent"></div>
+          <div class="editor-file indent"></div>
+          <div class="editor-file indent"></div>
+          <div class="editor-file"></div>
+          <div class="editor-file indent"></div>
+          <div class="editor-file indent"></div>
+        </div>
+        <!-- Code area: line numbers + colored blocks -->
+        <div class="editor-code">
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-block kw-block" style="width:18%"></span> <span class="code-block str-block" style="width:28%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-block kw-block" style="width:14%"></span> <span class="code-block type-block" style="width:32%"></span> <span class="code-block br-block" style="width:4%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block kw-block" style="width:12%"></span> <span class="code-block var-block" style="width:22%"></span><span class="code-block p-block" style="width:3%"></span> <span class="code-block type-block" style="width:20%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block kw-block" style="width:12%"></span> <span class="code-block var-block" style="width:16%"></span><span class="code-block p-block" style="width:3%"></span> <span class="code-block type-block" style="width:18%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block kw-block" style="width:14%"></span> <span class="code-block fn-block" style="width:18%"></span><span class="code-block p-block" style="width:6%"></span> <span class="code-block br-block" style="width:4%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-indent"></span><span class="code-block var-block" style="width:22%"></span> <span class="code-block p-block" style="width:4%"></span> <span class="code-block var-block" style="width:16%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-indent"></span><span class="code-block fn-block" style="width:26%"></span><span class="code-block p-block" style="width:6%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block br-block" style="width:4%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block kw-block" style="width:14%"></span> <span class="code-block fn-block" style="width:20%"></span><span class="code-block p-block" style="width:8%"></span> <span class="code-block br-block" style="width:4%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-indent"></span><span class="code-block kw-block" style="width:12%"></span> <span class="code-block var-block" style="width:18%"></span> <span class="code-block p-block" style="width:4%"></span> <span class="code-block fn-block" style="width:22%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-indent"></span><span class="code-block var-block" style="width:16%"></span> <span class="code-block p-block" style="width:4%"></span> <span class="code-block var-block" style="width:14%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block br-block" style="width:4%"></span></div>
+          <div class="code-line"><span class="ln-gutter"></span><span class="code-block br-block" style="width:4%"></span></div>
+        </div>
       </div>
     </div>
 
@@ -52,22 +103,24 @@
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
         <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        <span class="hero-win-title flex-1 text-center text-[10px] font-medium">Terminal</span>
       </div>
-      <div class="hero-win-body p-3 space-y-1.5">
-        <div class="h-1.5 rounded-full hero-content-line w-2/3"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-1/2"></div>
-        <div class="h-1.5 rounded-full hero-content-line w-3/4"></div>
+      <div class="hero-win-body terminal-body">
+        <div class="term-line"><span class="term-prompt-block"></span> <span class="term-cmd-block" style="width:38%"></span></div>
+        <div class="term-line"><span class="term-out-block" style="width:52%"></span></div>
+        <div class="term-line"><span class="term-out-block" style="width:60%"></span></div>
+        <div class="term-line"></div>
+        <div class="term-line"><span class="term-prompt-block"></span> <span class="term-cmd-block" style="width:30%"></span></div>
+        <div class="term-line"><span class="term-out-block term-green-block" style="width:55%"></span></div>
+        <div class="term-line"><span class="term-out-block term-green-block" style="width:48%"></span></div>
+        <div class="term-line"></div>
+        <div class="term-line"><span class="term-prompt-block"></span> <span class="term-cursor-block"></span></div>
       </div>
     </div>
 
     <!-- Tile overlays (one per zone, shown during respective snap) -->
-    <div class="hero-tile-overlay hero-tile-ol-tl absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:2%;width:46%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10);"></div>
-    <div class="hero-tile-overlay hero-tile-ol-bl absolute rounded-lg opacity-0 pointer-events-none" style="top:52%;left:2%;width:46%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10);"></div>
-    <div class="hero-tile-overlay hero-tile-ol-rh absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:52%;width:46%;height:96%; border:2px solid var(--accent); background:rgba(166,179,204,0.10);"></div>
-
-    <!-- Snap indicator line -->
-    <div class="hero-snap-line absolute opacity-0 pointer-events-none" style="width:2px; background:var(--accent); box-shadow:0 0 8px var(--accent-glow);"></div>
+    <div class="hero-tile-overlay hero-tile-ol-tl absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:2%;width:46%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
+    <div class="hero-tile-overlay hero-tile-ol-bl absolute rounded-lg opacity-0 pointer-events-none" style="top:52%;left:2%;width:46%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
+    <div class="hero-tile-overlay hero-tile-ol-rh absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:52%;width:46%;height:96%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
 
     <!-- Cursor -->
     <div class="hero-cursor absolute pointer-events-none" style="width:18px;height:24px;z-index:50;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
@@ -130,31 +183,106 @@
   }
   .hero-tile-ol-tl,
   .hero-tile-ol-bl,
-  .hero-tile-ol-rh,
-  .hero-snap-line {
+  .hero-tile-ol-rh {
     will-change: opacity;
   }
 
   /* ── Light/Dark theme for hero animation ── */
   .hero-animation { background: #0D1017; }
   .hero-titlebar { background: #1A1F2E; }
-  .hero-win-title { color: rgba(255,255,255,0.3); }
   .hero-win-body { background: #141922; }
   .hero-win-terminal .hero-win-body { background: #0F1319; }
   .hero-win-editor .hero-win-body { background: #12161F; }
   .hero-content-line { background: rgba(255,255,255,0.06); }
   .hero-desktop-bg { background: #0D1017; }
+
+  /* ── Browser window content ── */
+  .browser-body { padding: 0; display: flex; flex-direction: column; height: calc(100% - 28px); overflow: hidden; }
+  .browser-url-bar { display: flex; align-items: center; gap: 4px; padding: 3px 6px; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .browser-nav-btns { display: flex; gap: 2px; }
+  .browser-nav-btn { width: 6px; height: 6px; border-radius: 2px; background: rgba(255,255,255,0.08); }
+  .browser-url-field { flex: 1; display: flex; align-items: center; gap: 3px; background: rgba(255,255,255,0.04); border-radius: 4px; padding: 2px 5px; height: 14px; }
+  .browser-lock { font-size: 6px; opacity: 0.3; line-height: 1; }
+  .browser-url-text { height: 3px; width: 55%; border-radius: 2px; background: rgba(255,255,255,0.08); }
+  .browser-page { flex: 1; padding: 6px; overflow: hidden; }
+  .browser-hero-img { width: 100%; height: 28%; border-radius: 3px; background: linear-gradient(135deg, rgba(166,179,204,0.12) 0%, rgba(166,179,204,0.06) 100%); margin-bottom: 5px; }
+  .browser-heading { height: 5px; width: 45%; border-radius: 2px; background: rgba(255,255,255,0.12); margin-bottom: 5px; }
+  .browser-text { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.06); margin-bottom: 3px; }
+  .browser-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 5px; }
+  .browser-card { background: rgba(255,255,255,0.02); border-radius: 3px; padding: 4px; border: 1px solid rgba(255,255,255,0.03); }
+  .browser-card-img { width: 100%; height: 14px; border-radius: 2px; background: rgba(166,179,204,0.08); margin-bottom: 3px; }
+
+  /* ── Code Editor content ── */
+  .editor-body { padding: 0; display: flex; height: calc(100% - 28px); overflow: hidden; }
+  .editor-sidebar { width: 22%; padding: 5px 4px; background: rgba(255,255,255,0.015); border-right: 1px solid rgba(255,255,255,0.04); display: flex; flex-direction: column; gap: 2px; }
+  .editor-section-head { height: 3px; width: 45%; border-radius: 2px; background: rgba(255,255,255,0.1); margin-bottom: 3px; }
+  .editor-file { height: 3.5px; border-radius: 2px; background: rgba(255,255,255,0.05); width: 75%; }
+  .editor-file.active { background: rgba(166,179,204,0.2); }
+  .editor-file.indent { margin-left: 7px; width: 60%; }
+  .editor-code { flex: 1; padding: 5px 0; overflow: hidden; }
+  .code-line { display: flex; align-items: center; padding: 0 5px; height: 10px; gap: 3px; }
+  .ln-gutter { width: 10px; height: 3px; border-radius: 1px; background: rgba(255,255,255,0.07); flex-shrink: 0; margin-right: 6px; }
+  .code-indent { width: 8px; flex-shrink: 0; }
+  .code-block { height: 3.5px; border-radius: 1.5px; display: inline-block; flex-shrink: 0; }
+  .kw-block { background: rgba(255,122,178,0.5); }
+  .str-block { background: rgba(255,129,112,0.4); }
+  .type-block { background: rgba(172,242,228,0.35); }
+  .fn-block { background: rgba(103,183,164,0.4); }
+  .var-block { background: rgba(120,194,179,0.3); }
+  .br-block { background: rgba(255,255,255,0.15); }
+  .p-block { background: rgba(255,255,255,0.1); }
+
+  /* ── Terminal content ── */
+  .terminal-body { padding: 7px 8px; height: calc(100% - 28px); overflow: hidden; display: flex; flex-direction: column; gap: 0; }
+  .term-line { display: flex; align-items: center; gap: 4px; height: 10px; }
+  .term-prompt-block { width: 5px; height: 5px; border-radius: 1px; background: #28C840; opacity: 0.7; flex-shrink: 0; }
+  .term-cmd-block { height: 3px; border-radius: 1.5px; background: rgba(255,255,255,0.12); }
+  .term-out-block { height: 3px; border-radius: 1.5px; background: rgba(255,255,255,0.06); }
+  .term-green-block { background: rgba(40,200,64,0.2); }
+  .term-cursor-block { width: 6px; height: 8px; border-radius: 1px; background: rgba(255,255,255,0.25); animation: blink-cursor 1s step-end infinite; }
+  @keyframes blink-cursor { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
   .hero-cursor svg path { fill: white; stroke: black; }
   .hero-resize-cursor svg path { stroke: white; }
 
   :global(:root:not(.dark)) .hero-animation { background: #E8E8ED; }
   :global(:root:not(.dark)) .hero-titlebar { background: #D1D1D6; }
-  :global(:root:not(.dark)) .hero-win-title { color: rgba(0,0,0,0.4); }
   :global(:root:not(.dark)) .hero-win-body { background: #F5F5F7; }
   :global(:root:not(.dark)) .hero-win-terminal .hero-win-body { background: #EBEBF0; }
   :global(:root:not(.dark)) .hero-win-editor .hero-win-body { background: #F0F0F5; }
   :global(:root:not(.dark)) .hero-content-line { background: rgba(0,0,0,0.06); }
   :global(:root:not(.dark)) .hero-desktop-bg { background: #E8E8ED; }
+
+  /* ── Light theme: Browser ── */
+  :global(:root:not(.dark)) .browser-url-bar { background: rgba(0,0,0,0.03); border-bottom-color: rgba(0,0,0,0.06); }
+  :global(:root:not(.dark)) .browser-nav-btn { background: rgba(0,0,0,0.1); }
+  :global(:root:not(.dark)) .browser-url-field { background: rgba(0,0,0,0.04); }
+  :global(:root:not(.dark)) .browser-url-text { background: rgba(0,0,0,0.1); }
+  :global(:root:not(.dark)) .browser-hero-img { background: linear-gradient(135deg, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.03) 100%); }
+  :global(:root:not(.dark)) .browser-heading { background: rgba(0,0,0,0.14); }
+  :global(:root:not(.dark)) .browser-text { background: rgba(0,0,0,0.06); }
+  :global(:root:not(.dark)) .browser-card { background: rgba(0,0,0,0.02); border-color: rgba(0,0,0,0.05); }
+  :global(:root:not(.dark)) .browser-card-img { background: rgba(0,0,0,0.05); }
+
+  /* ── Light theme: Code Editor ── */
+  :global(:root:not(.dark)) .editor-sidebar { background: rgba(0,0,0,0.02); border-right-color: rgba(0,0,0,0.06); }
+  :global(:root:not(.dark)) .editor-section-head { background: rgba(0,0,0,0.12); }
+  :global(:root:not(.dark)) .editor-file { background: rgba(0,0,0,0.07); }
+  :global(:root:not(.dark)) .editor-file.active { background: rgba(0,80,200,0.18); }
+  :global(:root:not(.dark)) .ln-gutter { background: rgba(0,0,0,0.08); }
+  :global(:root:not(.dark)) .kw-block { background: rgba(173,61,164,0.4); }
+  :global(:root:not(.dark)) .str-block { background: rgba(209,47,27,0.3); }
+  :global(:root:not(.dark)) .type-block { background: rgba(62,128,135,0.3); }
+  :global(:root:not(.dark)) .fn-block { background: rgba(50,109,116,0.35); }
+  :global(:root:not(.dark)) .var-block { background: rgba(75,143,140,0.25); }
+  :global(:root:not(.dark)) .br-block { background: rgba(0,0,0,0.12); }
+  :global(:root:not(.dark)) .p-block { background: rgba(0,0,0,0.08); }
+
+  /* ── Light theme: Terminal ── */
+  :global(:root:not(.dark)) .term-prompt-block { background: #28A745; }
+  :global(:root:not(.dark)) .term-cmd-block { background: rgba(0,0,0,0.1); }
+  :global(:root:not(.dark)) .term-out-block { background: rgba(0,0,0,0.06); }
+  :global(:root:not(.dark)) .term-green-block { background: rgba(40,167,69,0.18); }
+  :global(:root:not(.dark)) .term-cursor-block { background: rgba(0,0,0,0.2); }
   :global(:root:not(.dark)) .hero-cursor svg path { fill: black; stroke: white; }
   :global(:root:not(.dark)) .hero-resize-cursor svg path { stroke: black; }
   :global(:root:not(.dark)) .hero-win-browser,
@@ -308,22 +436,6 @@
     49%   { opacity: 1; }
     51%   { opacity: 0; }
     100%  { opacity: 0; }
-  }
-
-  /* === SNAP LINE (vertical border between left & right halves) === */
-  .hero-snap-line {
-    animation: snap-line var(--dur) ease infinite;
-  }
-
-  @keyframes snap-line {
-    0%    { opacity: 0; top: 0%; height: 100%; left: 50%; }
-    52%   { opacity: 0; top: 0%; height: 100%; left: 50%; }
-    54%   { opacity: 1; top: 0%; height: 100%; left: 50%; }
-    57%   { opacity: 1; top: 0%; height: 100%; left: 50%; }
-    68%   { opacity: 1; top: 0%; height: 100%; left: 58%; }
-    75%   { opacity: 1; top: 0%; height: 100%; left: 58%; }
-    78%   { opacity: 0; top: 0%; height: 100%; left: 58%; }
-    100%  { opacity: 0; top: 0%; height: 100%; left: 50%; }
   }
 
   /* === RESIZE CURSOR (appears during coupled resize) === */

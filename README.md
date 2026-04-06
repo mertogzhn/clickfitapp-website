@@ -1,43 +1,89 @@
-# Astro Starter Kit: Minimal
+<p align="center">
+  <img src="public/images/app-icon-light.png" alt="ClickFit" width="128" height="128" style="border-radius: 22px;" />
+</p>
 
-```sh
-npm create astro@latest -- --template minimal
+<h1 align="center">ClickFit</h1>
+
+<p align="center">
+  <strong>Every window, exactly where you want it.</strong><br />
+  Effortless window management for macOS.
+</p>
+
+<p align="center">
+  <a href="https://clickfitapp.com/#download"><img src="https://img.shields.io/badge/Download-macOS-blue?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS" /></a>
+  <a href="https://clickfitapp.com"><img src="https://img.shields.io/badge/Website-clickfitapp.com-8b9fcc?style=for-the-badge" alt="Website" /></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/macOS-14%20Sonoma%2B-black?logo=apple" alt="macOS 14+" />
+  <img src="https://img.shields.io/badge/Apple%20Silicon%20%26%20Intel-supported-green" alt="Universal" />
+  <img src="https://img.shields.io/badge/Price-Free-brightgreen" alt="Free" />
+  <img src="https://img.shields.io/badge/Built%20with-Swift-F05138?logo=swift&logoColor=white" alt="Swift" />
+</p>
+
+---
+
+Move, resize, and snap any window with modifier-click gestures. A native menu bar app that stays invisible until you need it.
+
+## Features
+
+### Mouse Move & Resize
+
+Hold a modifier key and **left-click drag** to move any window from anywhere. **Right-click drag** to resize from any position — no need to find tiny edges or title bars.
+
+### Edge Snapping & Tiling
+
+Drag windows to screen edges to snap into tiled positions. **9 tile zones** — halves, quarters, and full screen — with visual overlay previews before you drop.
+
+### Smart Snap & Coupled Resize
+
+Windows automatically snap to each other's edges. Grab a shared border and both windows resize together in sync — your layout stays perfectly aligned.
+
+### Keyboard Shortcuts
+
+Customizable global hotkeys for tiling, centering, maximizing, layouts, and cross-display moves.
+
+### Predefined Layouts
+
+Instantly arrange windows into **9 layout presets**: columns, rows, grids, and split ratios.
+
+### Multi-Monitor & Spaces
+
+Move windows between displays and virtual desktops with a keystroke.
+
+### Adaptive Tiling
+
+Tile zones detect anchored neighbors and expand to fill remaining space automatically.
+
+### Lightweight & Fast
+
+Native Swift with vsync-aligned updates. Under 20MB, minimal memory footprint.
+
+## System Requirements
+
+- macOS 14 Sonoma or later
+- Apple Silicon & Intel supported
+- Accessibility permission required (System Settings > Privacy & Security > Accessibility)
+
+## Website
+
+This repository contains the source code for [clickfitapp.com](https://clickfitapp.com), the official ClickFit landing page. Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com), deployed via GitHub Pages.
+
+### Development
+
+```bash
+npm install       # Install dependencies
+npm run dev       # Start dev server at localhost:4321
+npm run build     # Build production site to ./dist/
+npm run preview   # Preview production build locally
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Deployment
 
-## 🚀 Project Structure
+The site is automatically deployed to GitHub Pages on push to `main`. The custom domain `clickfitapp.com` is configured via the `CNAME` file.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<p align="center">
+  &copy; 2026 ClickFit. All rights reserved.
+</p>
