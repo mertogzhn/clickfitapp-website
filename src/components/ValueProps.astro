@@ -1,0 +1,54 @@
+---
+const props = [
+  {
+    icon: `<svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M8 38c4-8 12-20 32-28" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="40" cy="10" r="3" fill="var(--accent)" fill-opacity="0.3" stroke="var(--accent)"/>
+    </svg>`,
+    title: 'Zero Learning Curve',
+    description: 'Modifier + click. That\'s it. Move any window from anywhere, resize from any edge. No tutorials needed.',
+  },
+  {
+    icon: `<svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="6" y="8" width="36" height="4" rx="2" stroke="currentColor" opacity="0.3"/>
+      <circle cx="36" cy="10" r="2.5" fill="var(--accent)" fill-opacity="0.6" stroke="var(--accent)"/>
+      <path d="M6 20v18" stroke="currentColor" stroke-width="1" opacity="0.1"/>
+    </svg>`,
+    title: 'Invisible Until You Need It',
+    description: 'Lives in your menu bar. No dock icon, no overlays, no clutter. Under 20MB, native Swift performance.',
+  },
+  {
+    icon: `<svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="6" y="6" width="16" height="16" rx="3" stroke="var(--accent)" fill="var(--accent)" fill-opacity="0.08"/>
+      <rect x="24" y="6" width="18" height="16" rx="3" stroke="var(--accent)" fill="var(--accent)" fill-opacity="0.12"/>
+      <rect x="6" y="24" width="18" height="18" rx="3" stroke="var(--accent)" fill="var(--accent)" fill-opacity="0.12"/>
+      <rect x="26" y="24" width="16" height="18" rx="3" stroke="var(--accent)" fill="var(--accent)" fill-opacity="0.08"/>
+      <path d="M22 14h4M22 33h4" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 2" stroke-linecap="round"/>
+    </svg>`,
+    title: 'Intelligent Tiling',
+    description: 'Windows snap to each other. Resize one, its neighbor adjusts. Tiles adapt to fill remaining space automatically.',
+  },
+];
+---
+
+<section class="relative py-24 md:py-32">
+  <!-- Ambient glow -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] bg-accent-secondary/5 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate="stagger">
+      {props.map((prop) => (
+        <div class="glass-card p-8 text-center">
+          <div class="flex justify-center mb-5">
+            <Fragment set:html={prop.icon} />
+          </div>
+          <h3 class="text-xl font-bold mb-3">{prop.title}</h3>
+          <p class="text-text-secondary leading-relaxed text-sm">{prop.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

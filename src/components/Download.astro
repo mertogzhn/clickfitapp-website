@@ -3,36 +3,58 @@
 
 <section id="download" class="relative py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="relative glass-card overflow-hidden">
-      <!-- Background glow -->
+    <div class="relative glass-card overflow-hidden" data-animate="scale-in">
+      <!-- Background glow — more dramatic -->
       <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[80px]"></div>
+        <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[100px]"></div>
+        <div class="absolute top-1/2 right-1/4 translate-x-1/4 -translate-y-1/3 w-[250px] h-[250px] rounded-full blur-[80px]" style="background:rgba(196,181,224,0.06);"></div>
       </div>
 
-      <div class="relative px-8 py-16 md:px-16 md:py-20 text-center">
-        <!-- App Icon -->
-        <img src="/images/app-icon-light.png" alt="ClickFit" class="w-20 h-20 rounded-2xl mx-auto mb-8" />
+      <div class="relative px-8 py-16 md:px-16 md:py-24 text-center">
+        <!-- App Icon with pulse glow -->
+        <div class="relative inline-block mb-8">
+          <img src="/images/app-icon-light.png" alt="ClickFit" class="w-24 h-24 rounded-2xl relative z-10" />
+          <div class="absolute inset-0 rounded-2xl z-0" style="animation:pulse-glow 3s ease-in-out infinite;"></div>
+        </div>
 
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Ready to take control of your windows?
         </h2>
         <p class="text-text-secondary text-lg max-w-lg mx-auto mb-10">
           Download ClickFit for free and start managing your macOS windows the way they should be.
         </p>
 
-        <!-- Download Button -->
-        <a
-          href="#"
-          class="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white font-medium px-10 py-4 rounded-xl transition-all shadow-lg shadow-accent-glow hover:shadow-xl hover:shadow-accent-glow text-lg"
-        >
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-          </svg>
-          Download for macOS
-        </a>
+        <!-- Download Button — larger -->
+        <div class="flex flex-col items-center gap-4 mb-10">
+          <a
+            href="#"
+            class="group inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white font-medium px-12 py-5 rounded-xl transition-all shadow-lg shadow-accent-glow hover:shadow-xl hover:shadow-accent-glow text-lg"
+          >
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download for macOS
+            <svg class="w-4 h-4 transition-transform group-hover:translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
+
+          <!-- View on GitHub secondary link -->
+          <a
+            href="https://github.com/clickfitapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
 
         <!-- System Requirements -->
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-text-secondary/60">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-text-secondary/60">
           <div class="flex items-center gap-2">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/>

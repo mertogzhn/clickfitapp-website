@@ -2,21 +2,65 @@
 const steps = [
   {
     number: '01',
-    title: 'Install & Launch',
-    description: 'Download ClickFit and launch it. Grant Accessibility permission when prompted. It appears in your menu bar — ready to go.',
-    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>`,
+    title: 'Install in seconds',
+    description: 'Download the DMG, drag to Applications. Grant Accessibility permission when prompted. ClickFit appears in your menu bar — ready to go.',
+    visual: `<svg class="w-full max-w-[240px]" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Applications folder -->
+      <rect x="100" y="30" width="80" height="70" rx="8" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+      <text x="140" y="72" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.3">Applications</text>
+      <!-- DMG icon moving -->
+      <g>
+        <rect x="30" y="45" width="40" height="40" rx="10" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="50" y="70" text-anchor="middle" fill="var(--accent)" font-size="9" font-weight="600">CF</text>
+      </g>
+      <!-- Arrow -->
+      <path d="M75 65h20" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      <path d="M91 61l4 4-4 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+      <!-- Menu bar indicator -->
+      <rect x="20" y="115" width="160" height="14" rx="3" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+      <circle cx="160" cy="122" r="3" fill="var(--accent)" fill-opacity="0.6"/>
+    </svg>`,
   },
   {
     number: '02',
     title: 'Modifier + Mouse',
-    description: 'Hold your modifier key, then left-click drag to move any window or right-click drag to resize. Double-click to center, double-right-click to maximize.',
-    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l3.057 11.053L12 10.5l4.243 1.106L17.5 3M12 10.5V21"/><circle cx="12" cy="21" r="1"/></svg>`,
+    description: 'Hold your modifier key, then left-click drag to move any window. Right-click drag to resize. Double-click to center, double-right-click to maximize.',
+    visual: `<svg class="w-full max-w-[240px]" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Key being pressed -->
+      <rect x="8" y="50" width="32" height="35" rx="6" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+      <text x="24" y="72" text-anchor="middle" fill="var(--accent)" font-size="13" font-weight="600">⇧</text>
+      <rect x="44" y="50" width="32" height="35" rx="6" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+      <text x="60" y="72" text-anchor="middle" fill="var(--accent)" font-size="13" font-weight="600">⌘</text>
+      <path d="M36 67h4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+      <!-- Plus symbol -->
+      <text x="85" y="72" text-anchor="middle" fill="currentColor" font-size="16" opacity="0.3">+</text>
+      <!-- Mini window being moved -->
+      <rect x="105" y="35" width="70" height="50" rx="8" stroke="currentColor" stroke-width="1.5" fill="var(--accent)" fill-opacity="0.06"/>
+      <rect x="105" y="35" width="70" height="16" rx="8" stroke="currentColor" stroke-width="1" fill="var(--accent)" fill-opacity="0.04"/>
+      <!-- Cursor on window -->
+      <path d="M145 75l-1-12 8 8-5 1-2 5z" fill="white" stroke="currentColor" stroke-width="0.5"/>
+      <!-- Movement trail -->
+      <path d="M140 60l20 20" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3" opacity="0.3"/>
+    </svg>`,
   },
   {
     number: '03',
-    title: 'Snap, Tile & Organize',
-    description: 'Drag windows to screen edges for automatic tiling. Use keyboard shortcuts for instant layouts. Windows snap to each other and resize in sync.',
-    icon: `<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M12 3v18M2 12h20"/></svg>`,
+    title: 'Snap, Tile, Organize',
+    description: 'Drag to edges for automatic tiling. Use keyboard shortcuts for instant layouts. Windows snap to each other and resize in sync.',
+    visual: `<svg class="w-full max-w-[240px]" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- 3x3 tile grid -->
+      <rect x="20" y="15" width="55" height="52" rx="6" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1"/>
+      <rect x="80" y="15" width="55" height="52" rx="6" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1"/>
+      <rect x="140" y="15" width="42" height="52" rx="6" fill="var(--accent)" fill-opacity="0.05" stroke="var(--accent)" stroke-width="1"/>
+      <rect x="20" y="72" width="55" height="52" rx="6" fill="var(--accent)" fill-opacity="0.05" stroke="var(--accent)" stroke-width="1"/>
+      <rect x="80" y="72" width="55" height="52" rx="6" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1"/>
+      <rect x="140" y="72" width="42" height="52" rx="6" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1"/>
+      <!-- Check marks in filled zones -->
+      <path d="M42 38l4 4 8-8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+      <path d="M102 38l4 4 8-8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+      <path d="M102 95l4 4 8-8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+      <path d="M155 95l4 4 8-8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    </svg>`,
   },
 ];
 ---
@@ -27,37 +71,46 @@ const steps = [
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]"></div>
   </div>
 
-  <div class="relative max-w-6xl mx-auto px-6">
+  <div class="relative max-w-4xl mx-auto px-6">
     <!-- Section Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" data-animate="fade-up">
       <p class="text-accent text-sm font-medium tracking-wide uppercase mb-3">How It Works</p>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
         Up and running in seconds
       </h2>
       <p class="text-text-secondary text-lg max-w-xl mx-auto">
-        No complicated setup. Install it, and you&apos;re ready to go.
+        No complicated setup. Install it, and you're ready to go.
       </p>
     </div>
 
-    <!-- Steps -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    <!-- Vertical stepper -->
+    <div class="space-y-0">
       {steps.map((step, index) => (
-        <div class="relative text-center">
-          {/* Connector line */}
+        <div class="relative" data-animate="fade-up">
+          {/* Vertical dashed connector line */}
           {index < steps.length - 1 && (
-            <div class="hidden md:block absolute top-10 left-[calc(50%+40px)] w-[calc(100%-80px)] h-px bg-gradient-to-r from-border to-transparent"></div>
+            <div class="absolute left-6 md:left-8 top-[80px] bottom-0 w-px border-l-2 border-dashed border-accent/20"></div>
           )}
 
-          {/* Step icon */}
-          <div class="relative inline-flex items-center justify-center w-20 h-20 glass-card text-accent mb-6">
-            <Fragment set:html={step.icon} />
-            <span class="absolute -top-2 -right-2 w-7 h-7 rounded-lg bg-accent text-white text-xs font-bold flex items-center justify-center">
-              {step.number}
-            </span>
-          </div>
+          <div class="glass-card p-6 md:p-8 mb-8 relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+              <!-- Text side -->
+              <div class={index % 2 === 1 ? 'order-1 md:order-2' : ''}>
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="w-10 h-10 rounded-xl bg-accent text-white text-sm font-bold flex items-center justify-center shrink-0">
+                    {step.number}
+                  </span>
+                  <h3 class="text-xl md:text-2xl font-semibold">{step.title}</h3>
+                </div>
+                <p class="text-text-secondary leading-relaxed">{step.description}</p>
+              </div>
 
-          <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
-          <p class="text-text-secondary text-sm leading-relaxed max-w-xs mx-auto">{step.description}</p>
+              <!-- Visual side -->
+              <div class={`flex items-center justify-center ${index % 2 === 1 ? 'order-2 md:order-1' : ''}`}>
+                <Fragment set:html={step.visual} />
+              </div>
+            </div>
+          </div>
         </div>
       ))}
     </div>
