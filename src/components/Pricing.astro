@@ -1,0 +1,101 @@
+---
+---
+
+<section id="pricing" class="relative py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="text-center mb-16" data-animate="fade-up">
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+        Simple, one-time pricing
+      </h2>
+      <p class="text-text-secondary text-lg max-w-lg mx-auto">
+        Pay once, own it forever. Free updates included.
+      </p>
+    </div>
+
+    <!-- Pricing card -->
+    <div class="max-w-sm mx-auto" data-animate="scale-in">
+      <div class="glass-card p-8 text-center relative overflow-hidden">
+
+        <!-- Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-accent/10 rounded-full blur-[60px] pointer-events-none"></div>
+
+        <div class="relative">
+          <!-- Badge -->
+          <span class="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-6 px-3 py-1 rounded-full border border-accent/30 bg-accent/5">
+            Lifetime License
+          </span>
+
+          <!-- Price -->
+          <div class="mb-2">
+            <span class="text-5xl font-bold">$4.99</span>
+            <span class="text-text-secondary ml-1">/ once</span>
+          </div>
+          <p class="text-text-secondary/60 text-sm mb-8">No subscription. No hidden fees.</p>
+
+          <!-- Feature list -->
+          <ul class="text-left space-y-3 mb-8 text-sm">
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>All window management features</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Free updates, forever</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>1 license — unlimited personal devices</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>14-day money back guarantee</span>
+            </li>
+          </ul>
+
+          <!-- Buy button -->
+          <button
+            id="paddle-buy-btn"
+            class="w-full group inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white font-medium px-8 py-4 rounded-xl transition-all shadow-lg shadow-accent-glow hover:shadow-xl hover:shadow-accent-glow text-base cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/>
+              <path d="M8 12l3 3 5-5"/>
+            </svg>
+            Buy Now
+          </button>
+
+          <p class="text-xs text-text-secondary/50 mt-4">
+            Secure checkout via Paddle &middot; All major cards &amp; PayPal
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  import { initializePaddle } from '@paddle/paddle-js';
+
+  // Initialize Paddle early so checkout opens instantly on click
+  const paddle = await initializePaddle({
+    environment: 'sandbox',
+    token: 'pdl_sdbx_apikey_01knwbwhrbe13qk6hk05gxhpqg_XTb1567pKtRcvNDgPDBdeg_AOt',
+  });
+
+  document.getElementById('paddle-buy-btn')?.addEventListener('click', () => {
+    paddle?.Checkout.open({
+      items: [{ priceId: 'pri_01knwcc00k6xhevre135jbktmy', quantity: 1 }],
+    });
+  });
+</script>
