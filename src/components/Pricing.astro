@@ -87,15 +87,19 @@
 <script>
   import { initializePaddle } from '@paddle/paddle-js';
 
-  // Initialize Paddle early so checkout opens instantly on click
+  // PUBLIC_ prefix: Vite inlines these at build time (safe for client-side use)
+  const token = import.meta.env.PUBLIC_PADDLE_TOKEN;
+  const priceId = import.meta.env.PUBLIC_PADDLE_PRICE_ID;
+  const env = import.meta.env.PUBLIC_PADDLE_ENV || 'sandbox';
+
   const paddle = await initializePaddle({
-    environment: 'sandbox',
-    token: 'pdl_sdbx_apikey_01knwbwhrbe13qk6hk05gxhpqg_XTb1567pKtRcvNDgPDBdeg_AOt',
+    environment: env,
+    token,
   });
 
   document.getElementById('paddle-buy-btn')?.addEventListener('click', () => {
     paddle?.Checkout.open({
-      items: [{ priceId: 'pri_01knwcc00k6xhevre135jbktmy', quantity: 1 }],
+      items: [{ priceId, quantity: 1 }],
     });
   });
 </script>

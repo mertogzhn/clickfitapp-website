@@ -32,6 +32,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          PUBLIC_PADDLE_TOKEN: ${{ secrets.PUBLIC_PADDLE_TOKEN }}
+          PUBLIC_PADDLE_PRICE_ID: ${{ secrets.PUBLIC_PADDLE_PRICE_ID }}
+          PUBLIC_PADDLE_ENV: ${{ secrets.PUBLIC_PADDLE_ENV }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
