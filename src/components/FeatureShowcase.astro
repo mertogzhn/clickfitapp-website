@@ -10,7 +10,7 @@
   <div class="showcase-viewport relative rounded-2xl overflow-hidden border border-black/[0.08] dark:border-white/[0.06]" style="aspect-ratio:16/10; contain:layout style paint;">
 
     <!-- ────────────────────────────────────────────────── -->
-    <!-- SLIDE 0 — Hero Animation (15s, infinite)          -->
+    <!-- SLIDE 0 — Hero Animation (15s)                    -->
     <!-- ────────────────────────────────────────────────── -->
     <div class="showcase-slide active" data-slide="0" data-duration="15000">
       <!-- Window: Browser -->
@@ -104,6 +104,40 @@
       <div class="s0-tile-bl absolute rounded-lg opacity-0 pointer-events-none" style="top:52%;left:2%;width:46%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
       <div class="s0-tile-rh absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:52%;width:46%;height:96%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
 
+      <!-- Overview badges -->
+      <div class="s0-badge-wrap absolute pointer-events-none" style="top:4%;left:50%;width:0;z-index:20;">
+        <div class="s0-badge s0-badge-1 sc-badge">
+          <span class="sc-badge-keys" aria-hidden="true">
+            <span class="sc-badge-key">⇧</span>
+            <span class="sc-badge-key">⌘</span>
+            <span class="sc-badge-key">←</span>
+            <span class="sc-badge-key">↑</span>
+          </span>
+        </div>
+        <div class="s0-badge s0-badge-2 sc-badge">
+          <span class="sc-badge-keys" aria-hidden="true">
+            <span class="sc-badge-key">⇧</span>
+            <span class="sc-badge-key">⌘</span>
+            <span class="sc-badge-key">←</span>
+            <span class="sc-badge-key">↓</span>
+          </span>
+        </div>
+        <div class="s0-badge s0-badge-3 sc-badge">
+          <span class="sc-badge-keys" aria-hidden="true">
+            <span class="sc-badge-key">⇧</span>
+            <span class="sc-badge-key">⌘</span>
+            <span class="sc-badge-key">→</span>
+          </span>
+        </div>
+        <div class="s0-badge s0-badge-4 sc-badge">
+          <span class="sc-badge-keys" aria-hidden="true">
+            <span class="sc-badge-key">⇧</span>
+            <span class="sc-badge-key">⌘</span>
+          </span>
+          <span class="sc-badge-copy">Right Click</span>
+        </div>
+      </div>
+
       <!-- Cursor -->
       <div class="s0-cursor absolute pointer-events-none" style="width:18px;height:24px;z-index:50;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
         <svg viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,19 +183,16 @@
         </div>
       </div>
 
-      <!-- Badge: Move phase -->
-      <div class="s1-badge-move absolute pointer-events-none" style="top:5%;right:5%;z-index:20;">
-        <div class="sc-badge">
+      <!-- Move/resize badges -->
+      <div class="s1-badge-wrap absolute pointer-events-none" style="top:4%;left:50%;width:0;z-index:20;">
+        <div class="s1-badge s1-badge-move sc-badge">
           <span class="sc-badge-keys" aria-hidden="true">
             <span class="sc-badge-key">⇧</span>
             <span class="sc-badge-key">⌘</span>
           </span>
           <span class="sc-badge-copy">Left Click</span>
         </div>
-      </div>
-      <!-- Badge: Resize phase -->
-      <div class="s1-badge-resize absolute pointer-events-none opacity-0" style="top:5%;right:5%;z-index:20;">
-        <div class="sc-badge">
+        <div class="s1-badge s1-badge-resize sc-badge opacity-0">
           <span class="sc-badge-keys" aria-hidden="true">
             <span class="sc-badge-key">⇧</span>
             <span class="sc-badge-key">⌘</span>
@@ -186,9 +217,9 @@
     </div>
 
     <!-- ────────────────────────────────────────────────── -->
-    <!-- SLIDE 2 — Hotkey Tiling (8s)                      -->
+    <!-- SLIDE 2 — Hotkey Tiling (9s)                      -->
     <!-- ────────────────────────────────────────────────── -->
-    <div class="showcase-slide" data-slide="2" data-duration="7800">
+    <div class="showcase-slide" data-slide="2" data-duration="9000">
       <!-- Single window -->
       <div class="s2-win absolute rounded-[10px] overflow-hidden" style="top:15%;left:25%;width:50%;height:70%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
         <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
@@ -270,49 +301,41 @@
     </div>
 
     <!-- ────────────────────────────────────────────────── -->
-    <!-- SLIDE 3 — Predefined Layouts (12s)                -->
+    <!-- SLIDE 3 — Predefined Layouts (10s)                -->
     <!-- ────────────────────────────────────────────────── -->
-    <div class="showcase-slide" data-slide="3" data-duration="12000">
-      <!-- 4 simplified windows -->
-      <div class="s3-win s3-w1 absolute rounded-[10px] overflow-hidden" style="top:10%;left:5%;width:30%;height:35%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
-        <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        </div>
-        <div class="sc-win-body sc-simple-body"><div class="sc-body-lines"><div class="browser-heading"></div><div class="browser-text w-full"></div><div class="browser-text w-[75%]"></div></div></div>
+    <div class="showcase-slide" data-slide="3" data-duration="10000">
+      <div class="s3-layout s3-layout-1 absolute" style="inset:12% 6% 8%;">
+        <div class="s3-preview absolute" style="top:0%;left:0%;width:48.5%;height:100%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:51.5%;width:48.5%;height:100%;"></div>
       </div>
-      <div class="s3-win s3-w2 absolute rounded-[10px] overflow-hidden" style="top:5%;left:40%;width:35%;height:40%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:3;">
-        <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        </div>
-        <div class="sc-win-body sc-simple-body"><div class="sc-body-lines"><div class="browser-heading"></div><div class="browser-text w-[90%]"></div><div class="browser-text w-[60%]"></div></div></div>
+      <div class="s3-layout s3-layout-2 absolute" style="inset:12% 6% 8%;">
+        <div class="s3-preview absolute" style="top:0%;left:0%;width:65%;height:100%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:68%;width:32%;height:100%;"></div>
       </div>
-      <div class="s3-win s3-w3 absolute rounded-[10px] overflow-hidden" style="top:50%;left:15%;width:28%;height:38%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:1;">
-        <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        </div>
-        <div class="sc-win-body sc-simple-body"><div class="sc-body-lines"><div class="browser-heading"></div><div class="browser-text w-[80%]"></div></div></div>
+      <div class="s3-layout s3-layout-3 absolute" style="inset:12% 6% 8%;">
+        <div class="s3-preview absolute" style="top:0%;left:0%;width:31%;height:100%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:34.5%;width:31%;height:100%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:69%;width:31%;height:100%;"></div>
       </div>
-      <div class="s3-win s3-w4 absolute rounded-[10px] overflow-hidden" style="top:55%;left:55%;width:32%;height:30%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
-        <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        </div>
-        <div class="sc-win-body sc-simple-body"><div class="sc-body-lines"><div class="browser-heading"></div><div class="browser-text w-[70%]"></div></div></div>
+      <div class="s3-layout s3-layout-4 absolute" style="inset:12% 6% 8%;">
+        <div class="s3-preview absolute" style="top:0%;left:0%;width:31%;height:48.5%;"></div>
+        <div class="s3-preview absolute" style="top:51.5%;left:0%;width:31%;height:48.5%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:34%;width:66%;height:100%;"></div>
+      </div>
+      <div class="s3-layout s3-layout-5 absolute" style="inset:12% 6% 8%;">
+        <div class="s3-preview absolute" style="top:0%;left:0%;width:48.5%;height:48.5%;"></div>
+        <div class="s3-preview absolute" style="top:0%;left:51.5%;width:48.5%;height:48.5%;"></div>
+        <div class="s3-preview absolute" style="top:51.5%;left:0%;width:48.5%;height:48.5%;"></div>
+        <div class="s3-preview absolute" style="top:51.5%;left:51.5%;width:48.5%;height:48.5%;"></div>
       </div>
 
       <!-- Layout badge -->
-      <div class="s3-badge-wrap absolute pointer-events-none" style="top:4%;left:50%;transform:translateX(-50%);z-index:20;">
-        <div class="s3-badge s3-badge-1 sc-badge"><span>2 Columns</span></div>
-        <div class="s3-badge s3-badge-2 sc-badge"><span>⅔ Left</span></div>
-        <div class="s3-badge s3-badge-3 sc-badge"><span>Wide Right</span></div>
-        <div class="s3-badge s3-badge-4 sc-badge"><span>4 Grid</span></div>
+      <div class="s3-badge-wrap absolute pointer-events-none" style="top:4%;left:50%;width:0;z-index:20;">
+        <div class="s3-badge s3-badge-1 sc-badge"><span class="sc-badge-copy">2 Columns</span></div>
+        <div class="s3-badge s3-badge-2 sc-badge"><span class="sc-badge-copy">2/3</span></div>
+        <div class="s3-badge s3-badge-3 sc-badge"><span class="sc-badge-copy">3 Columns</span></div>
+        <div class="s3-badge s3-badge-4 sc-badge"><span class="sc-badge-copy">R Wide</span></div>
+        <div class="s3-badge s3-badge-5 sc-badge"><span class="sc-badge-copy">4 Grid</span></div>
       </div>
     </div>
 
@@ -320,8 +343,8 @@
     <!-- SLIDE 4 — Adaptive Tiling (10s)                   -->
     <!-- ────────────────────────────────────────────────── -->
     <div class="showcase-slide" data-slide="4" data-duration="10000">
-      <!-- Left anchored window (nearly 75% width) -->
-      <div class="s4-win s4-anchor absolute rounded-[0px] overflow-hidden" style="top:0%;left:0%;width:74%;height:100%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
+      <!-- Left anchored window (65% width) -->
+      <div class="s4-win s4-anchor absolute rounded-[0px] overflow-hidden" style="top:0%;left:0%;width:65%;height:100%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
         <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
@@ -357,7 +380,7 @@
       </div>
 
       <!-- Right floating window (dragged to edge) -->
-      <div class="s4-win s4-floating absolute rounded-[10px] overflow-hidden" style="top:26%;left:58%;width:27%;height:56%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:3;">
+      <div class="s4-win s4-floating absolute rounded-[10px] overflow-hidden" style="top:28%;left:53%;width:24%;height:52%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:3;">
         <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
@@ -378,8 +401,8 @@
       </div>
 
       <!-- Adaptive tile zones -->
-      <div class="s4-zone s4-zone-rh absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:75%;width:23%;height:96%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
-      <div class="s4-zone s4-zone-tr absolute rounded-lg opacity-0 pointer-events-none" style="top:2%;left:75%;width:23%;height:46%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
+      <div class="s4-zone s4-zone-rh absolute opacity-0 pointer-events-none" style="top:0%;left:65%;width:35%;height:100%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
+      <div class="s4-zone s4-zone-tr absolute opacity-0 pointer-events-none" style="top:0%;left:65%;width:35%;height:50%; border:2px solid var(--accent); background:rgba(166,179,204,0.10); z-index:10;"></div>
 
       <!-- Annotation label -->
       <div class="s4-label absolute pointer-events-none opacity-0" style="bottom:8%;left:50%;transform:translateX(-50%);z-index:20;">
@@ -398,8 +421,8 @@
     <!-- SLIDE 5 — Coupled Resize (8s)                     -->
     <!-- ────────────────────────────────────────────────── -->
     <div class="showcase-slide" data-slide="5" data-duration="8000">
-      <!-- Left tiled window -->
-      <div class="s5-win s5-left absolute rounded-[0px] overflow-hidden" style="top:0%;left:0%;width:50%;height:100%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
+      <!-- Left window -->
+      <div class="s5-win s5-left absolute rounded-[0px] overflow-hidden" style="top:0%;left:0%;width:40%;height:100%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
         <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
           <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
@@ -421,41 +444,76 @@
         </div>
       </div>
 
-      <!-- Right tiled window -->
-      <div class="s5-win s5-right absolute rounded-[0px] overflow-hidden" style="top:0%;left:50%;width:50%;height:100%; box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08); z-index:2;">
-        <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
-          <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
-        </div>
-        <div class="sc-win-body browser-body">
-          <div class="browser-url-bar">
-            <div class="browser-nav-btns"><span class="browser-nav-btn"></span><span class="browser-nav-btn"></span></div>
-            <div class="browser-url-field"><span class="browser-lock">&#x1F512;</span><span class="browser-url-text"></span></div>
+      <!-- Right stacked windows -->
+      <div class="s5-right-stack absolute" style="top:0%;left:calc(40% + 1px);width:calc(60% - 1px);height:100%;display:grid;grid-template-rows:repeat(3,1fr);gap:1px;z-index:2;">
+        <div class="s5-win s5-right-panel s5-right-top relative rounded-[0px] overflow-hidden" style="box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08);">
+          <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
           </div>
-          <div class="browser-page">
-            <div class="browser-hero-img"></div>
-            <div class="browser-heading"></div>
-            <div class="browser-text w-full"></div>
-            <div class="browser-text w-[85%]"></div>
+          <div class="sc-win-body browser-body">
+            <div class="browser-url-bar">
+              <div class="browser-nav-btns"><span class="browser-nav-btn"></span><span class="browser-nav-btn"></span></div>
+              <div class="browser-url-field"><span class="browser-lock">&#x1F512;</span><span class="browser-url-text"></span></div>
+            </div>
+            <div class="browser-page">
+              <div class="browser-hero-img"></div>
+              <div class="browser-heading"></div>
+              <div class="browser-text w-full"></div>
+              <div class="browser-text w-[84%]"></div>
+            </div>
+          </div>
+        </div>
+        <div class="s5-win s5-right-panel s5-right-mid relative rounded-[0px] overflow-hidden" style="box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08);">
+          <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
+          </div>
+          <div class="sc-win-body editor-body">
+            <div class="editor-sidebar">
+              <div class="editor-section-head"></div>
+              <div class="editor-file active"></div>
+              <div class="editor-file"></div>
+              <div class="editor-file indent"></div>
+            </div>
+            <div class="editor-code">
+              <div class="code-line"><span class="ln-gutter"></span><span class="code-block kw-block" style="width:18%"></span> <span class="code-block str-block" style="width:28%"></span></div>
+              <div class="code-line"><span class="ln-gutter"></span></div>
+              <div class="code-line"><span class="ln-gutter"></span><span class="code-block kw-block" style="width:14%"></span> <span class="code-block type-block" style="width:32%"></span></div>
+              <div class="code-line"><span class="ln-gutter"></span><span class="code-indent"></span><span class="code-block fn-block" style="width:18%"></span><span class="code-block p-block" style="width:6%"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="s5-win s5-right-panel s5-right-bottom relative rounded-[0px] overflow-hidden" style="box-shadow:0 8px 32px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08);">
+          <div class="sc-titlebar flex items-center h-7 px-3 gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FF5F57;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#FEBC2E;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#28C840;"></span>
+          </div>
+          <div class="sc-win-body terminal-body">
+            <div class="term-line"><span class="term-prompt-block"></span> <span class="term-cmd-block" style="width:34%"></span></div>
+            <div class="term-line"><span class="term-out-block" style="width:58%"></span></div>
+            <div class="term-line"><span class="term-out-block term-green-block" style="width:46%"></span></div>
+            <div class="term-line"><span class="term-prompt-block"></span> <span class="term-cursor-block"></span></div>
           </div>
         </div>
       </div>
 
-      <!-- Sync badge -->
-      <div class="s5-badge absolute pointer-events-none opacity-0" style="top:4%;left:50%;transform:translateX(-50%);z-index:20;">
-        <div class="sc-badge"><span>Coupled Resize</span></div>
-      </div>
-
-      <!-- Cursor (normal → resize) -->
-      <div class="s5-cursor absolute pointer-events-none" style="width:18px;height:24px;z-index:50;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
-        <svg viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L1 17.5L5.5 13.5L9 21L12 19.5L8.5 12.5L14 12L1 1Z" fill="white" stroke="black" stroke-width="0.5"/>
-        </svg>
+      <!-- Gesture badge -->
+      <div class="s5-badge-wrap absolute pointer-events-none" style="top:4%;left:50%;width:0;z-index:20;">
+        <div class="s5-badge sc-badge">
+          <span class="sc-badge-keys" aria-hidden="true">
+            <span class="sc-badge-key">⇧</span>
+            <span class="sc-badge-key">⌘</span>
+          </span>
+          <span class="sc-badge-copy">Right Click</span>
+        </div>
       </div>
 
       <!-- Resize cursor -->
-      <div class="s5-resize-cursor absolute pointer-events-none opacity-0" style="width:20px;height:20px;z-index:50;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+      <div class="s5-resize-cursor absolute pointer-events-none opacity-0" style="width:20px;height:20px;z-index:50;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));transform:translate(-50%,-50%);">
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 10H19M1 10L5 6M1 10L5 14M19 10L15 6M19 10L15 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -647,7 +705,7 @@
   @keyframes blink-cursor { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
 
   /* ── Cursor SVG theme ── */
-  .s0-cursor svg path, .s1-cursor svg path, .s4-cursor svg path, .s5-cursor svg path { fill: white; stroke: black; }
+  .s0-cursor svg path, .s1-cursor svg path, .s4-cursor svg path { fill: white; stroke: black; }
   .s0-resize-cursor svg path, .s1-resize-cursor svg path, .s5-resize-cursor svg path { stroke: white; }
 
   /* ══════════════════════════════════════════════════════════
@@ -689,8 +747,7 @@
 
   :global(:root:not(.dark)) .s0-cursor svg path,
   :global(:root:not(.dark)) .s1-cursor svg path,
-  :global(:root:not(.dark)) .s4-cursor svg path,
-  :global(:root:not(.dark)) .s5-cursor svg path { fill: black; stroke: white; }
+  :global(:root:not(.dark)) .s4-cursor svg path { fill: black; stroke: white; }
   :global(:root:not(.dark)) .s0-resize-cursor svg path,
   :global(:root:not(.dark)) .s1-resize-cursor svg path,
   :global(:root:not(.dark)) .s5-resize-cursor svg path { stroke: black; }
@@ -700,14 +757,11 @@
   :global(:root:not(.dark)) .s0-terminal,
   :global(:root:not(.dark)) .s1-win,
   :global(:root:not(.dark)) .s2-win,
-  :global(:root:not(.dark)) .s3-w1,
-  :global(:root:not(.dark)) .s3-w2,
-  :global(:root:not(.dark)) .s3-w3,
-  :global(:root:not(.dark)) .s3-w4,
+  :global(:root:not(.dark)) .s3-preview,
   :global(:root:not(.dark)) .s4-anchor,
   :global(:root:not(.dark)) .s4-floating,
   :global(:root:not(.dark)) .s5-left,
-  :global(:root:not(.dark)) .s5-right {
+  :global(:root:not(.dark)) .s5-right-panel {
     box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
     border-color: rgba(0,0,0,0.1) !important;
   }
@@ -804,11 +858,21 @@
   .showcase-slide.active .s0-cursor,
   .showcase-slide.active .s0-resize-cursor,
   .showcase-slide.active .s1-cursor,
-  .showcase-slide.active .s1-resize-cursor,
-  .showcase-slide.active .s4-cursor,
-  .showcase-slide.active .s5-cursor,
-  .showcase-slide.active .s5-resize-cursor {
+  .showcase-slide.active .s1-resize-cursor {
     will-change: transform, opacity;
+  }
+  .showcase-slide.active .s0-badge,
+  .showcase-slide.active .s1-badge,
+  .showcase-slide.active .s2-badge,
+  .showcase-slide.active .s4-badge,
+  .showcase-slide.active .s5-badge {
+    will-change: opacity, transform;
+  }
+  .showcase-slide.active .s4-cursor {
+    will-change: top, left, opacity;
+  }
+  .showcase-slide.active .s5-resize-cursor {
+    will-change: top, left, opacity;
   }
   .showcase-slide.active .s0-tile-tl,
   .showcase-slide.active .s0-tile-bl,
@@ -823,26 +887,41 @@
   .showcase-slide.active .s2-win {
     will-change: top, left, width, height, border-radius;
   }
-  .showcase-slide.active .s3-w1,
-  .showcase-slide.active .s3-w2,
-  .showcase-slide.active .s3-w3,
-  .showcase-slide.active .s3-w4 {
-    will-change: top, left, width, height, border-radius;
+  .showcase-slide.active .s3-layout,
+  .showcase-slide.active .s3-badge {
+    will-change: opacity, transform;
   }
   .showcase-slide.active .s4-floating {
     will-change: top, left, width, height, border-radius;
   }
   .showcase-slide.active .s5-left,
-  .showcase-slide.active .s5-right {
+  .showcase-slide.active .s5-right-stack {
     will-change: width, left;
   }
 
   /* ══════════════════════════════════════════════════════════
-     SLIDE 0 — HERO ANIMATION (15s infinite)
+     SLIDE 0 — HERO ANIMATION (15s)
      ══════════════════════════════════════════════════════════ */
   .showcase-slide.active[data-slide="0"] {
     --dur: 15s;
   }
+
+  .s0-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: center center;
+  }
+  .showcase-slide.active[data-slide="0"] .s0-badge-1 { animation: s0-b1 var(--dur) ease infinite; }
+  .showcase-slide.active[data-slide="0"] .s0-badge-2 { animation: s0-b2 var(--dur) ease infinite; }
+  .showcase-slide.active[data-slide="0"] .s0-badge-3 { animation: s0-b3 var(--dur) ease infinite; }
+  .showcase-slide.active[data-slide="0"] .s0-badge-4 { animation: s0-b4 var(--dur) ease infinite; }
+  @keyframes s0-b1 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 12%{opacity:0;transform:translateX(-50%) scale(0.85);} 15%{opacity:1;transform:translateX(-50%) scale(1);} 21%{opacity:1;transform:translateX(-50%) scale(1);} 24%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s0-b2 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 27%{opacity:0;transform:translateX(-50%) scale(0.85);} 30%{opacity:1;transform:translateX(-50%) scale(1);} 36%{opacity:1;transform:translateX(-50%) scale(1);} 39%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s0-b3 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 42%{opacity:0;transform:translateX(-50%) scale(0.85);} 45%{opacity:1;transform:translateX(-50%) scale(1);} 51%{opacity:1;transform:translateX(-50%) scale(1);} 54%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s0-b4 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 55%{opacity:0;transform:translateX(-50%) scale(0.85);} 58%{opacity:1;transform:translateX(-50%) scale(1);} 77%{opacity:1;transform:translateX(-50%) scale(1);} 80%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
 
   .showcase-slide.active[data-slide="0"] .s0-cursor {
     animation: s0-cursor var(--dur) cubic-bezier(0.4,0,0.2,1) infinite;
@@ -956,15 +1035,23 @@
      ══════════════════════════════════════════════════════════ */
 
   /* ── Move badge: visible during move phase ── */
+  .s1-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: center center;
+  }
   .showcase-slide.active[data-slide="1"] .s1-badge-move {
     animation: s1-badge-move 10s ease forwards;
   }
   @keyframes s1-badge-move {
-    0%   { opacity: 0; transform: scale(0.9); }
-    4%   { opacity: 1; transform: scale(1); }
-    55%  { opacity: 1; transform: scale(1); }
-    60%  { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 0; }
+    0%   { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    4%   { opacity: 1; transform: translateX(-50%) scale(1); }
+    55%  { opacity: 1; transform: translateX(-50%) scale(1); }
+    60%  { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    100% { opacity: 0; transform: translateX(-50%) scale(0.85); }
   }
 
   /* ── Resize badge: visible during resize phase ── */
@@ -972,10 +1059,10 @@
     animation: s1-badge-resize 10s ease forwards;
   }
   @keyframes s1-badge-resize {
-    0%   { opacity: 0; }
-    60%  { opacity: 0; transform: scale(0.9); }
-    65%  { opacity: 1; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1); }
+    0%   { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    60%  { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    65%  { opacity: 1; transform: translateX(-50%) scale(1); }
+    100% { opacity: 1; transform: translateX(-50%) scale(1); }
   }
 
   /* ── Window: single window, move then resize ── */
@@ -1038,11 +1125,11 @@
   }
 
   /* ══════════════════════════════════════════════════════════
-     SLIDE 2 — HOTKEY TILING (7.8s forwards)
+     SLIDE 2 — HOTKEY TILING (9s forwards)
      ══════════════════════════════════════════════════════════ */
   /* Window position: 5 tile snaps + almost maximize */
   .showcase-slide.active[data-slide="2"] .s2-win {
-    animation: s2-win 7.8s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation: s2-win 9s cubic-bezier(0.4,0,0.2,1) forwards;
   }
   @keyframes s2-win {
     0%    { top:15%;  left:25%;  width:50%;  height:70%; border-radius:10px; }
@@ -1061,125 +1148,77 @@
     80%   { top:0%;   left:0%;   width:100%; height:50%; border-radius:0; }
     /* Snap bottom-right quarter */
     86%   { top:50%;  left:50%;  width:50%;  height:50%; border-radius:0; }
-    90%   { top:50%;  left:50%;  width:50%;  height:50%; border-radius:0; }
+    92%   { top:50%;  left:50%;  width:50%;  height:50%; border-radius:0; }
     /* Almost maximize (80% x 80%, centered) */
-    96%   { top:10%;  left:10%;  width:80%;  height:80%; border-radius:10px; }
+    98%   { top:10%;  left:10%;  width:80%;  height:80%; border-radius:10px; }
     100%  { top:10%;  left:10%;  width:80%;  height:80%; border-radius:10px; }
   }
 
   /* Badges: each visible for its phase */
   .s2-badge { position: absolute; top: 0; left: 0; opacity: 0; transform: translateX(-50%) scale(0.85); transform-origin: center center; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-1 { animation: s2-b1 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-2 { animation: s2-b2 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-3 { animation: s2-b3 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-4 { animation: s2-b4 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-5 { animation: s2-b5 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-badge-6 { animation: s2-b6 7.8s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-1 { animation: s2-b1 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-2 { animation: s2-b2 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-3 { animation: s2-b3 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-4 { animation: s2-b4 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-5 { animation: s2-b5 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-badge-6 { animation: s2-b6 9s ease forwards; }
   @keyframes s2-b1 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 6%{opacity:1;transform:translateX(-50%) scale(1);} 18%{opacity:1;transform:translateX(-50%) scale(1);} 22%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
   @keyframes s2-b2 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 24%{opacity:0;transform:translateX(-50%) scale(0.85);} 28%{opacity:1;transform:translateX(-50%) scale(1);} 36%{opacity:1;transform:translateX(-50%) scale(1);} 40%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
   @keyframes s2-b3 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 42%{opacity:0;transform:translateX(-50%) scale(0.85);} 46%{opacity:1;transform:translateX(-50%) scale(1);} 54%{opacity:1;transform:translateX(-50%) scale(1);} 58%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
   @keyframes s2-b4 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 60%{opacity:0;transform:translateX(-50%) scale(0.85);} 64%{opacity:1;transform:translateX(-50%) scale(1);} 72%{opacity:1;transform:translateX(-50%) scale(1);} 76%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
-  @keyframes s2-b5 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 78%{opacity:0;transform:translateX(-50%) scale(0.85);} 82%{opacity:1;transform:translateX(-50%) scale(1);} 88%{opacity:1;transform:translateX(-50%) scale(1);} 92%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
-  @keyframes s2-b6 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 90%{opacity:0;transform:translateX(-50%) scale(0.85);} 94%{opacity:1;transform:translateX(-50%) scale(1);} 100%{opacity:1;transform:translateX(-50%) scale(1);} }
+  @keyframes s2-b5 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 78%{opacity:0;transform:translateX(-50%) scale(0.85);} 82%{opacity:1;transform:translateX(-50%) scale(1);} 90%{opacity:1;transform:translateX(-50%) scale(1);} 94%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s2-b6 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 92%{opacity:0;transform:translateX(-50%) scale(0.85);} 96%{opacity:1;transform:translateX(-50%) scale(1);} 100%{opacity:1;transform:translateX(-50%) scale(1);} }
 
   /* Tile zone flashes */
-  .showcase-slide.active[data-slide="2"] .s2-zone-lh { animation: s2-z-lh 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-zone-tr { animation: s2-z-tr 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-zone-bl { animation: s2-z-bl 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-zone-th { animation: s2-z-th 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-zone-br { animation: s2-z-br 7.8s ease forwards; }
-  .showcase-slide.active[data-slide="2"] .s2-zone-am { animation: s2-z-am 7.8s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-lh { animation: s2-z-lh 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-tr { animation: s2-z-tr 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-bl { animation: s2-z-bl 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-th { animation: s2-z-th 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-br { animation: s2-z-br 9s ease forwards; }
+  .showcase-slide.active[data-slide="2"] .s2-zone-am { animation: s2-z-am 9s ease forwards; }
   @keyframes s2-z-lh { 0%{opacity:0;} 8%{opacity:0;} 10%{opacity:1;} 14%{opacity:1;} 18%{opacity:0;} 100%{opacity:0;} }
   @keyframes s2-z-tr { 0%{opacity:0;} 24%{opacity:0;} 26%{opacity:1;} 30%{opacity:1;} 34%{opacity:0;} 100%{opacity:0;} }
   @keyframes s2-z-bl { 0%{opacity:0;} 42%{opacity:0;} 44%{opacity:1;} 48%{opacity:1;} 52%{opacity:0;} 100%{opacity:0;} }
   @keyframes s2-z-th { 0%{opacity:0;} 60%{opacity:0;} 62%{opacity:1;} 66%{opacity:1;} 70%{opacity:0;} 100%{opacity:0;} }
-  @keyframes s2-z-br { 0%{opacity:0;} 78%{opacity:0;} 80%{opacity:1;} 84%{opacity:1;} 88%{opacity:0;} 100%{opacity:0;} }
-  @keyframes s2-z-am { 0%{opacity:0;} 90%{opacity:0;} 92%{opacity:1;} 96%{opacity:1;} 100%{opacity:0;} }
+  @keyframes s2-z-br { 0%{opacity:0;} 78%{opacity:0;} 80%{opacity:1;} 86%{opacity:1;} 90%{opacity:0;} 100%{opacity:0;} }
+  @keyframes s2-z-am { 0%{opacity:0;} 92%{opacity:0;} 94%{opacity:1;} 98%{opacity:1;} 100%{opacity:0;} }
 
   /* ══════════════════════════════════════════════════════════
-     SLIDE 3 — PREDEFINED LAYOUTS (12s forwards)
+     SLIDE 3 — PREDEFINED LAYOUTS (10s forwards)
      ══════════════════════════════════════════════════════════ */
-  /* Phase 1 (scattered→2col): 8-25%, Phase 2 (2col→⅔left): 25-42%, Phase 3 (→wide-right): 42-58%, Phase 4 (→4grid): 58-75%, hold 75-100% */
-  .showcase-slide.active[data-slide="3"] .s3-w1 { animation: s3-w1 12s cubic-bezier(0.4,0,0.2,1) forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-w2 { animation: s3-w2 12s cubic-bezier(0.4,0,0.2,1) forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-w3 { animation: s3-w3 12s cubic-bezier(0.4,0,0.2,1) forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-w4 { animation: s3-w4 12s cubic-bezier(0.4,0,0.2,1) forwards; }
-
-  @keyframes s3-w1 {
-    0%   { top:10%; left:5%;  width:30%; height:35%; border-radius:10px; }
-    8%   { top:10%; left:5%;  width:30%; height:35%; border-radius:10px; }
-    /* 2-column: top-left */
-    17%  { top:0%;  left:0%;  width:50%; height:50%; border-radius:0; }
-    25%  { top:0%;  left:0%;  width:50%; height:50%; border-radius:0; }
-    /* ⅔ left: top-left (66% width) */
-    33%  { top:0%;  left:0%;  width:66%; height:50%; border-radius:0; }
-    42%  { top:0%;  left:0%;  width:66%; height:50%; border-radius:0; }
-    /* Wide right: top-left (34% width) */
-    50%  { top:0%;  left:0%;  width:34%; height:50%; border-radius:0; }
-    58%  { top:0%;  left:0%;  width:34%; height:50%; border-radius:0; }
-    /* 4-grid: top-left */
-    67%  { top:0%;  left:0%;  width:50%; height:50%; border-radius:0; }
-    100% { top:0%;  left:0%;  width:50%; height:50%; border-radius:0; }
+  .s3-preview {
+    border: 2px solid var(--accent);
+    background: rgba(166,179,204,0.10);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), 0 10px 24px rgba(0,0,0,0.12);
   }
-  @keyframes s3-w2 {
-    0%   { top:5%;  left:40%; width:35%; height:40%; border-radius:10px; }
-    8%   { top:5%;  left:40%; width:35%; height:40%; border-radius:10px; }
-    /* 2-column: top-right */
-    17%  { top:0%;  left:50%; width:50%; height:50%; border-radius:0; }
-    25%  { top:0%;  left:50%; width:50%; height:50%; border-radius:0; }
-    /* ⅔ left: top-right (34% width) */
-    33%  { top:0%;  left:66%; width:34%; height:50%; border-radius:0; }
-    42%  { top:0%;  left:66%; width:34%; height:50%; border-radius:0; }
-    /* Wide right: top-right (66% width) */
-    50%  { top:0%;  left:34%; width:66%; height:50%; border-radius:0; }
-    58%  { top:0%;  left:34%; width:66%; height:50%; border-radius:0; }
-    /* 4-grid: top-right */
-    67%  { top:0%;  left:50%; width:50%; height:50%; border-radius:0; }
-    100% { top:0%;  left:50%; width:50%; height:50%; border-radius:0; }
+  .s3-layout {
+    opacity: 0;
+    transform: scale(0.97);
   }
-  @keyframes s3-w3 {
-    0%   { top:50%; left:15%; width:28%; height:38%; border-radius:10px; }
-    8%   { top:50%; left:15%; width:28%; height:38%; border-radius:10px; }
-    /* 2-column: bottom-left */
-    17%  { top:50%; left:0%;  width:50%; height:50%; border-radius:0; }
-    25%  { top:50%; left:0%;  width:50%; height:50%; border-radius:0; }
-    /* ⅔ left: bottom-left (66%) */
-    33%  { top:50%; left:0%;  width:66%; height:50%; border-radius:0; }
-    42%  { top:50%; left:0%;  width:66%; height:50%; border-radius:0; }
-    /* Wide right: bottom-left (34%) */
-    50%  { top:50%; left:0%;  width:34%; height:50%; border-radius:0; }
-    58%  { top:50%; left:0%;  width:34%; height:50%; border-radius:0; }
-    /* 4-grid: bottom-left */
-    67%  { top:50%; left:0%;  width:50%; height:50%; border-radius:0; }
-    100% { top:50%; left:0%;  width:50%; height:50%; border-radius:0; }
-  }
-  @keyframes s3-w4 {
-    0%   { top:55%; left:55%; width:32%; height:30%; border-radius:10px; }
-    8%   { top:55%; left:55%; width:32%; height:30%; border-radius:10px; }
-    /* 2-column: bottom-right */
-    17%  { top:50%; left:50%; width:50%; height:50%; border-radius:0; }
-    25%  { top:50%; left:50%; width:50%; height:50%; border-radius:0; }
-    /* ⅔ left: bottom-right (34%) */
-    33%  { top:50%; left:66%; width:34%; height:50%; border-radius:0; }
-    42%  { top:50%; left:66%; width:34%; height:50%; border-radius:0; }
-    /* Wide right: bottom-right (66%) */
-    50%  { top:50%; left:34%; width:66%; height:50%; border-radius:0; }
-    58%  { top:50%; left:34%; width:66%; height:50%; border-radius:0; }
-    /* 4-grid: bottom-right */
-    67%  { top:50%; left:50%; width:50%; height:50%; border-radius:0; }
-    100% { top:50%; left:50%; width:50%; height:50%; border-radius:0; }
-  }
+  .showcase-slide.active[data-slide="3"] .s3-layout-1 { animation: s3-layout-1 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-layout-2 { animation: s3-layout-2 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-layout-3 { animation: s3-layout-3 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-layout-4 { animation: s3-layout-4 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-layout-5 { animation: s3-layout-5 10s ease forwards; }
+  @keyframes s3-layout-1 { 0%{opacity:0;transform:scale(0.97);} 6%{opacity:1;transform:scale(1);} 16%{opacity:1;transform:scale(1);} 20%{opacity:0;transform:scale(0.97);} 100%{opacity:0;transform:scale(0.97);} }
+  @keyframes s3-layout-2 { 0%{opacity:0;transform:scale(0.97);} 22%{opacity:0;transform:scale(0.97);} 26%{opacity:1;transform:scale(1);} 36%{opacity:1;transform:scale(1);} 40%{opacity:0;transform:scale(0.97);} 100%{opacity:0;transform:scale(0.97);} }
+  @keyframes s3-layout-3 { 0%{opacity:0;transform:scale(0.97);} 42%{opacity:0;transform:scale(0.97);} 46%{opacity:1;transform:scale(1);} 56%{opacity:1;transform:scale(1);} 60%{opacity:0;transform:scale(0.97);} 100%{opacity:0;transform:scale(0.97);} }
+  @keyframes s3-layout-4 { 0%{opacity:0;transform:scale(0.97);} 62%{opacity:0;transform:scale(0.97);} 66%{opacity:1;transform:scale(1);} 76%{opacity:1;transform:scale(1);} 80%{opacity:0;transform:scale(0.97);} 100%{opacity:0;transform:scale(0.97);} }
+  @keyframes s3-layout-5 { 0%{opacity:0;transform:scale(0.97);} 82%{opacity:0;transform:scale(0.97);} 86%{opacity:1;transform:scale(1);} 100%{opacity:1;transform:scale(1);} }
 
   /* Layout badges */
-  .s3-badge { position: absolute; top: 0; left: 0; opacity: 0; }
-  .showcase-slide.active[data-slide="3"] .s3-badge-1 { animation: s3-lb1 12s ease forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-badge-2 { animation: s3-lb2 12s ease forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-badge-3 { animation: s3-lb3 12s ease forwards; }
-  .showcase-slide.active[data-slide="3"] .s3-badge-4 { animation: s3-lb4 12s ease forwards; }
-  @keyframes s3-lb1 { 0%{opacity:0;transform:scale(0.85);} 6%{opacity:0;} 10%{opacity:1;transform:scale(1);} 22%{opacity:1;} 27%{opacity:0;} 100%{opacity:0;} }
-  @keyframes s3-lb2 { 0%{opacity:0;} 25%{opacity:0;transform:scale(0.85);} 29%{opacity:1;transform:scale(1);} 39%{opacity:1;} 44%{opacity:0;} 100%{opacity:0;} }
-  @keyframes s3-lb3 { 0%{opacity:0;} 42%{opacity:0;transform:scale(0.85);} 46%{opacity:1;transform:scale(1);} 56%{opacity:1;} 61%{opacity:0;} 100%{opacity:0;} }
-  @keyframes s3-lb4 { 0%{opacity:0;} 58%{opacity:0;transform:scale(0.85);} 62%{opacity:1;transform:scale(1);} 100%{opacity:1;} }
+  .s3-badge { position: absolute; top: 0; left: 0; opacity: 0; transform: translateX(-50%) scale(0.85); transform-origin: center center; }
+  .showcase-slide.active[data-slide="3"] .s3-badge-1 { animation: s3-lb1 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-badge-2 { animation: s3-lb2 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-badge-3 { animation: s3-lb3 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-badge-4 { animation: s3-lb4 10s ease forwards; }
+  .showcase-slide.active[data-slide="3"] .s3-badge-5 { animation: s3-lb5 10s ease forwards; }
+  @keyframes s3-lb1 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 6%{opacity:1;transform:translateX(-50%) scale(1);} 16%{opacity:1;transform:translateX(-50%) scale(1);} 20%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s3-lb2 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 22%{opacity:0;transform:translateX(-50%) scale(0.85);} 26%{opacity:1;transform:translateX(-50%) scale(1);} 36%{opacity:1;transform:translateX(-50%) scale(1);} 40%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s3-lb3 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 42%{opacity:0;transform:translateX(-50%) scale(0.85);} 46%{opacity:1;transform:translateX(-50%) scale(1);} 56%{opacity:1;transform:translateX(-50%) scale(1);} 60%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s3-lb4 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 62%{opacity:0;transform:translateX(-50%) scale(0.85);} 66%{opacity:1;transform:translateX(-50%) scale(1);} 76%{opacity:1;transform:translateX(-50%) scale(1);} 80%{opacity:0;transform:translateX(-50%) scale(0.85);} 100%{opacity:0;transform:translateX(-50%) scale(0.85);} }
+  @keyframes s3-lb5 { 0%{opacity:0;transform:translateX(-50%) scale(0.85);} 82%{opacity:0;transform:translateX(-50%) scale(0.85);} 86%{opacity:1;transform:translateX(-50%) scale(1);} 100%{opacity:1;transform:translateX(-50%) scale(1);} }
 
   /* ══════════════════════════════════════════════════════════
      SLIDE 4 — ADAPTIVE TILING (10s forwards)
@@ -1203,33 +1242,33 @@
 
   .showcase-slide.active[data-slide="4"] .s4-cursor {
     animation: s4-cursor 10s cubic-bezier(0.4,0,0.2,1) forwards;
-    top: 50%; left: 50%;
   }
   @keyframes s4-cursor {
-    0%   { transform: translate(150px, -30px); opacity: 0; }
-    10%  { transform: translate(246px, -72px); opacity: 1; }
-    /* Drag while holding near the upper-right area of the window */
-    38%  { transform: translate(392px, -72px); opacity: 1; }
-    /* Move upward to trigger adaptive top-right preview */
-    60%  { transform: translate(384px, -196px); opacity: 1; }
-    68%  { transform: translate(384px, -196px); opacity: 1; }
-    72%  { transform: translate(384px, -196px); opacity: 0; }
-    100% { transform: translate(384px, -196px); opacity: 0; }
+    0%   { top: 54%; left: 74%; opacity: 0; }
+    10%  { top: 54%; left: 74%; opacity: 1; }
+    /* Drag right while holding near the right-center of the window */
+    38%  { top: 54%; left: 95%; opacity: 1; }
+    /* Drag up toward the top-right adaptive preview */
+    60%  { top: 26%; left: 95%; opacity: 1; }
+    68%  { top: 26%; left: 95%; opacity: 1; }
+    72%  { top: 26%; left: 95%; opacity: 0; }
+    100% { top: 26%; left: 95%; opacity: 0; }
   }
 
   .showcase-slide.active[data-slide="4"] .s4-floating {
     animation: s4-float 10s cubic-bezier(0.4,0,0.2,1) forwards;
   }
   @keyframes s4-float {
-    0%   { top: 26%; left: 58%; width: 27%; height: 56%; border-radius: 10px; }
-    10%  { top: 26%; left: 58%; width: 27%; height: 56%; border-radius: 10px; }
-    /* Drag toward the adaptive right-half target */
-    38%  { top: 26%; left: 74%; width: 27%; height: 56%; border-radius: 8px; }
-    /* Move up while keeping the same grip point */
-    60%  { top: 4%; left: 74%; width: 27%; height: 56%; border-radius: 8px; }
+    0%   { top: 28%; left: 53%; width: 24%; height: 52%; border-radius: 10px; }
+    10%  { top: 28%; left: 53%; width: 24%; height: 52%; border-radius: 10px; }
+    /* Drag right with the cursor, without dropping */
+    38%  { top: 28%; left: 74%; width: 24%; height: 52%; border-radius: 10px; }
+    /* Drag up with the same delta to reach the top-right area */
+    60%  { top: 0%; left: 74%; width: 24%; height: 52%; border-radius: 10px; }
+    68%  { top: 0%; left: 74%; width: 24%; height: 52%; border-radius: 10px; }
     /* Drop into adaptive top-right tile */
-    68%  { top: 0%; left: 74%; width: 26%; height: 50%; border-radius: 0; }
-    100% { top: 0%; left: 74%; width: 26%; height: 50%; border-radius: 0; }
+    74%  { top: 0%; left: 65%; width: 35%; height: 50%; border-radius: 0; }
+    100% { top: 0%; left: 65%; width: 35%; height: 50%; border-radius: 0; }
   }
 
   .showcase-slide.active[data-slide="4"] .s4-zone-rh {
@@ -1242,16 +1281,16 @@
     0%   { opacity: 0; }
     24%  { opacity: 0; }
     28%  { opacity: 1; }
-    42%  { opacity: 1; }
-    46%  { opacity: 0; }
+    44%  { opacity: 1; }
+    48%  { opacity: 0; }
     100% { opacity: 0; }
   }
   @keyframes s4-zone-tr {
     0%   { opacity: 0; }
-    46%  { opacity: 0; }
-    50%  { opacity: 1; }
-    66%  { opacity: 1; }
-    70%  { opacity: 0; }
+    50%  { opacity: 0; }
+    54%  { opacity: 1; }
+    72%  { opacity: 1; }
+    76%  { opacity: 0; }
     100% { opacity: 0; }
   }
 
@@ -1260,70 +1299,69 @@
   }
   @keyframes s4-label {
     0%   { opacity: 0; }
-    70%  { opacity: 0; transform: translateX(-50%) translateY(8px); }
-    78%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+    74%  { opacity: 0; transform: translateX(-50%) translateY(8px); }
+    82%  { opacity: 1; transform: translateX(-50%) translateY(0); }
     100% { opacity: 1; transform: translateX(-50%) translateY(0); }
   }
 
   /* ══════════════════════════════════════════════════════════
      SLIDE 5 — COUPLED RESIZE (8s forwards)
      ══════════════════════════════════════════════════════════ */
-  .showcase-slide.active[data-slide="5"] .s5-cursor {
-    animation: s5-cursor 8s cubic-bezier(0.4,0,0.2,1) forwards;
-    top: 50%; left: 50%;
-  }
-  @keyframes s5-cursor {
-    0%   { transform: translate(70px, 0); opacity: 0; }
-    8%   { transform: translate(70px, 0); opacity: 1; }
-    /* Move toward center border */
-    25%  { transform: translate(0, 0); opacity: 1; }
-    /* Hide for resize cursor */
-    30%  { transform: translate(0, 0); opacity: 0; }
-    100% { transform: translate(0, 0); opacity: 0; }
-  }
-
   .showcase-slide.active[data-slide="5"] .s5-resize-cursor {
     animation: s5-resize 8s cubic-bezier(0.4,0,0.2,1) forwards;
-    top: 50%; left: 50%;
   }
   @keyframes s5-resize {
-    0%   { transform: translate(0, 0); opacity: 0; }
-    30%  { transform: translate(0, 0); opacity: 0; }
-    35%  { transform: translate(0, 0); opacity: 1; }
-    /* Drag right */
-    65%  { transform: translate(50px, 0); opacity: 1; }
-    85%  { transform: translate(50px, 0); opacity: 1; }
-    90%  { transform: translate(50px, 0); opacity: 0; }
-    100% { transform: translate(50px, 0); opacity: 0; }
+    0%   { top: 46%; left: calc(40% + 1px); opacity: 0; }
+    6%   { top: 46%; left: calc(40% + 1px); opacity: 1; }
+    20%  { top: 46%; left: calc(40% + 1px); opacity: 1; }
+    /* Coupled resize to the right */
+    46%  { top: 46%; left: calc(55% + 1px); opacity: 1; }
+    50%  { top: 46%; left: calc(55% + 1px); opacity: 1; }
+    /* Then back to the left, ending near the right-middle */
+    72%  { top: 46%; left: calc(49% + 1px); opacity: 1; }
+    86%  { top: 46%; left: calc(49% + 1px); opacity: 1; }
+    90%  { top: 46%; left: calc(49% + 1px); opacity: 0; }
+    100% { top: 46%; left: calc(49% + 1px); opacity: 0; }
   }
 
   .showcase-slide.active[data-slide="5"] .s5-left {
     animation: s5-left 8s cubic-bezier(0.4,0,0.2,1) forwards;
   }
   @keyframes s5-left {
-    0%   { width: 50%; }
-    35%  { width: 50%; }
-    65%  { width: 62%; }
-    100% { width: 62%; }
+    0%   { width: 40%; }
+    20%  { width: 40%; }
+    46%  { width: 55%; }
+    50%  { width: 55%; }
+    72%  { width: 49%; }
+    100% { width: 49%; }
   }
 
-  .showcase-slide.active[data-slide="5"] .s5-right {
-    animation: s5-right 8s cubic-bezier(0.4,0,0.2,1) forwards;
+  .showcase-slide.active[data-slide="5"] .s5-right-stack {
+    animation: s5-right-stack 8s cubic-bezier(0.4,0,0.2,1) forwards;
   }
-  @keyframes s5-right {
-    0%   { left: 50%; width: 50%; }
-    35%  { left: 50%; width: 50%; }
-    65%  { left: 62%; width: 38%; }
-    100% { left: 62%; width: 38%; }
+  @keyframes s5-right-stack {
+    0%   { left: calc(40% + 1px); width: calc(60% - 1px); }
+    20%  { left: calc(40% + 1px); width: calc(60% - 1px); }
+    46%  { left: calc(55% + 1px); width: calc(45% - 1px); }
+    50%  { left: calc(55% + 1px); width: calc(45% - 1px); }
+    72%  { left: calc(49% + 1px); width: calc(51% - 1px); }
+    100% { left: calc(49% + 1px); width: calc(51% - 1px); }
   }
 
+  .s5-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: center center;
+  }
   .showcase-slide.active[data-slide="5"] .s5-badge {
     animation: s5-badge 8s ease forwards;
   }
   @keyframes s5-badge {
-    0%   { opacity: 0; }
-    40%  { opacity: 0; transform: translateX(-50%) scale(0.85); }
-    48%  { opacity: 1; transform: translateX(-50%) scale(1); }
+    0%   { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    8%   { opacity: 1; transform: translateX(-50%) scale(1); }
     100% { opacity: 1; transform: translateX(-50%) scale(1); }
   }
 
@@ -1335,7 +1373,7 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
     }
-    .s0-cursor, .s1-cursor, .s4-cursor, .s5-cursor,
+    .s0-cursor, .s1-cursor, .s4-cursor,
     .s0-resize-cursor, .s1-resize-cursor, .s5-resize-cursor {
       display: none !important;
     }
